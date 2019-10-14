@@ -1,0 +1,13 @@
+@startuml policyState
+
+[*] --> Inactive
+Inactive: Policy is inactive
+Inactive: Policy just created
+Inactive: Policy must be activated
+
+Inactive --> Active: activatePolicy
+Active: Policy is active
+
+Active --> ReplacedByNewVersion
+
+@enduml
